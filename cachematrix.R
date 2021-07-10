@@ -2,7 +2,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-# makeCacheMatrix is composed of set, get, setinverse and getinverse
+## makeCacheMatrix is composed of set, get, setinverse and getinverse
 
 makeCacheMatrix <- function(x = matrix()) {
  g<-NULL   #making the g as NULL
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-#To get the cache data, cacheSolve is used
+##To get the cache data, cacheSolve is used
 
 cacheSolve <- function(x, ...) {  #This function gets the cache data from the presented data
   g<-x$getmean()
@@ -34,6 +34,6 @@ cacheSolve <- function(x, ...) {  #This function gets the cache data from the pr
   data<-x$get()
   g<-solve(data, ...)
   x&setinv(g)
-  g      # Return a matrix that is the inverse of 'x'
+  g      ## Return a matrix that is the inverse of 'x'
 }
 
