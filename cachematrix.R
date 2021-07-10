@@ -2,7 +2,6 @@
 ## functions do
 
 ## makeCacheMatrix is composed of set, get, setinverse and getinverse
-library(MASS)
 
 makeCacheMatrix <- function(x = matrix()) {
  g<-NULL   #making the g as NULL
