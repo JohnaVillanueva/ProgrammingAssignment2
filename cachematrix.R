@@ -1,29 +1,26 @@
 makeCacheMatrix <- function(x = matrix()) {
- g<-NULL   #making the g as NULL
- f<-function(y){
+ lan<-NULL   #making the g as NULL
+ san<-function(y){
          x<<-y
-         g<<-NULL
+         lan<<-NULL
          }
  get<-function()x
- setinv<-function(inverse)f<<-inverse
- getinv<-function(){
-        inver<-ginv(x)  #to obtain the inverse function of the matrix
-        inver%%x
-        }
+ setinv<-function(inverse)san<<-inverse
+ getinv<-function(){lan}
  list(set = set, get = get, setinverse = setinverse, getinverse = getinvserse)
 }
 
 ##It uses the command 'solve' to compute the inverse of the 'x'
 
 cacheSolve <- function(x, ...) {  #This function gets the cache data from the presented data
-  g<-x$getmean()
-  if(!is.null(g)){                   #This function is used to check if the inverse is null
+  lan<-x$getmean()
+  if(!is.null(lan)){                   #This function is used to check if the inverse is null
           message("getting cached data")
          return(g)                         #This function returns the inverse value of "g"
   }
   data <-x$get()
-  g <-solve(data, ...)
-  x&setinv(g)
-  g          ## Return a matrix that is the inverse of 'x'
+  lan <-solve(data, ...)
+  x&setinv(lan)
+  lan          ## Return a matrix that is the inverse of 'x'
 }
 
