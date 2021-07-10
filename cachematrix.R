@@ -5,7 +5,7 @@
 ## makeCacheMatrix is composed of set, get, setinverse and getinverse
 
 makeCacheMatrix <- function(x = matrix()) {
- g<-NULL   #making the g as NULL
+ g<-NULL   ##making the g as NULL
  f<-function(y){
     x<<-y
     g<<-NULL
@@ -25,11 +25,11 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 ##To get the cache data, cacheSolve is used
 
-cacheSolve <- function(x, ...) {  #This function gets the cache data from the presented data
+cacheSolve <- function(x, ...) {  ##This function gets the cache data from the presented data
   g<-x$getmean()
-  if(!is.null(g)){                   #This function is used to check if the inverse is null
+  if(!is.null(g)){                   ##This function is used to check if the inverse is null
     message("getting cached data")
-    return(g)                         #This function returns the inverse value of "g"
+    return(g)                         ##This function returns the inverse value of "g"
   }
   data<-x$get()
   g<-solve(data, ...)
