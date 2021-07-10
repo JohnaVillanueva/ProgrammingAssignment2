@@ -3,7 +3,7 @@
 ## functions do
 
 ## makeCacheMatrix is composed of set, get, setinverse and getinverse
-
+library(MASS)
 makeCacheMatrix <- function(x = matrix()) {
  g<-NULL   ##making the g as NULL
  f<-function(y){
@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
  get<-function()x
  setinv<-function(inverse)f<<-inverse
  getinv<-function(){
-   inver<-ginv(x)
+   inver<-ginv(x)  ##to obtain the inverse function of the matrix
    inver%%x
  }
  list(set = set, get = get,
