@@ -1,4 +1,3 @@
-
 ## Put comments here that give an overall description of what your
 ## functions do
 
@@ -6,19 +5,18 @@
 ##This function helps to get the inverse function of the matrix
 ##cacheSolve is use to get the cached data of a dataset
 ##Overall, the presented function is purposely use to get data on faster operation
-
 makeCacheMatrix <- function(x = matrix()) {
- g<-NULL   ##making the g as NULL
+ g<-NULL   #making the g as NULL
  f<-function(y){
-    x<<-y
-    g<<-NULL
- }
+         x<<-y
+         g<<-NULL
+         }
  get<-function()x
  setinv<-function(inverse)f<<-inverse
  getinv<-function(){
-   inver<-ginv(x)  ##to obtain the inverse function of the matrix
-   inver%%x
- }
+        inver<-ginv(x)  #to obtain the inverse function of the matrix
+        inver%%x
+        }
  list(set = set, get = get,
   setinverse = setinverse,
   getinverse = getinvserse)
@@ -28,15 +26,15 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 ##To get the cache data, cacheSolve is used
 
-cacheSolve <- function(x, ...) {  ##This function gets the cache data from the presented data
+cacheSolve <- function(x, ...) {  #This function gets the cache data from the presented data
   g<-x$getmean()
-  if(!is.null(g)){                   ##This function is used to check if the inverse is null
-    message("getting cached data")
-    return(g)                         ##This function returns the inverse value of "g"
+  if(!is.null(g)){                   #This function is used to check if the inverse is null
+          message("getting cached data")
+         return(g)                         #This function returns the inverse value of "g"
   }
   data<-x$get()
   g<-solve(data, ...)
   x&setinv(g)
-  g      ## Return a matrix that is the inverse of 'x'
+  g          ## Return a matrix that is the inverse of 'x'
 }
 
