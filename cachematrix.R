@@ -3,7 +3,10 @@
 ## functions do
 
 ## makeCacheMatrix is composed of set, get, setinverse and getinverse
-library(MASS)
+##This function helps to get the inverse function of the matrix
+##cacheSolve is use to get the cached data of a dataset
+##Overall, the presented function is purposely use to get data on faster operation
+
 makeCacheMatrix <- function(x = matrix()) {
  g<-NULL   ##making the g as NULL
  f<-function(y){
