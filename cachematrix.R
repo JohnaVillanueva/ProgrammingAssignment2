@@ -1,5 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
+
 
 ## makeCacheMatrix is composed of set, get, setinverse and getinverse
 ##This function helps to get the inverse function of the matrix
@@ -22,8 +21,6 @@ makeCacheMatrix <- function(x = matrix()) {
   getinverse = getinvserse)
 }
 
-
-## Write a short comment describing this function
 ##To get the cache data, cacheSolve is used
 
 cacheSolve <- function(x, ...) {  #This function gets the cache data from the presented data
