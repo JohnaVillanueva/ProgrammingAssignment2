@@ -41,11 +41,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ##The presented command is used to calculate the inverse of 'x' 
-##which is represnted by the word "lan
+##which is represented by the word "lan"
 ##and the cache of the presented data
 
-##The command also used to determine the nullity of the inverse function
-## The command is used to examine for the returning of the inverse  value of "lan"
+##The command is utilized to determine the nullity of the function of inverse
+## The command is manipulated and examine for the returning of the
+##inverse  value of "lan"
 
 
 
@@ -76,5 +77,5 @@ cacheSolve <- function(x, ...) {
   lan      
   
 }
-}
+
 
