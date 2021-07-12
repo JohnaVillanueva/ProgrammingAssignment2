@@ -1,21 +1,19 @@
-##The presented command aims to acquire the set inverse function of the matrix 
-##and value of the matrix.
-##Also, the get of the value of the matrix and the inverse of the matrix.
-##The main purpose of the function is to get the necessary data in a faster operation.
+##The presented command aims to acquire the necessary data 
+##regarding the set and get either the inverse or the value of the matrix
+##The main purpose of the function is to get and 
+##reserve the necessary data in a faster operation.
 
-##Below, the lan represents the inverse
-##the san represents the overall set of the matrix
-##lan is perceived as null
+
 
 
 makeCacheMatrix <- function(x = matrix()) {
   
   
   
-  lan<-NULL
+  inv<-NULL
   
   
-  san<-function(y){
+  set<-function(y){
     
     x<<-y
     
@@ -28,10 +26,10 @@ makeCacheMatrix <- function(x = matrix()) {
   get<-function()x
   
   
-  setinv<-function(inverse)san<<-inverse
+  setinv<-function(inverse)set<<-inverse
   
   
-  getinv<-function(){lan}
+  getinv<-function(){inv}
   
   
   list(set = set, get = get, setinverse = setinverse, getinverse = getinvserse)
@@ -40,27 +38,24 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-##The presented command is used to calculate the inverse of 'x' 
-##which is represented by the word "lan"
-##and the cache of the presented data
-
+##The presented command is operated to evaluate the inverse of command above 
+##and reinstate the the cache data of the command above as  there could be an incident
+##where an error could occur 
 ##The command is utilized to determine the nullity of the function of inverse
-## The command is manipulated and examine for the returning of the
-##inverse  value of "lan"
 
 
 
 cacheSolve <- function(x, ...) {  
   
   
-  lan<-x$getmean()
+  inv<-x$getinverse()
   
   
-  if(!is.null(lan)){ 
+  if(!is.null(inverse)){ 
     
     message("getting cached data")
     
-    return(lan)      
+    return(inv)      
     
   }
   
@@ -68,13 +63,13 @@ cacheSolve <- function(x, ...) {
   data <-x$get()
   
   
-  lan <-solve(data, ...)
+  inv <-solve(mat, ...)
   
   
-  x&setinv(lan)
+  x&setinv(inv)
   
   
-  lan      
+  inv      
   
 }
 
